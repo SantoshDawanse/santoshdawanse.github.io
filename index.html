@@ -1,875 +1,243 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-
-    <title>Santosh Dawanse</title>
-    <meta content="" name="description" />
-    <meta content="" name="keywords" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Santosh Dawanse - AI Product Builder</title>
+    <meta name="description" content="Santosh Dawanse - AI Product Builder specializing in LLMs, RAG, and cutting-edge AI solutions">
 
     <!-- Favicons -->
-    <link href="assets/img/favicon.png" rel="icon" />
-    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+    <link href="assets/img/favicon.svg" rel="icon" type="image/svg+xml">
+    <link href="assets/img/favicon.svg" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-      rel="stylesheet"
-    />
-
-    <!-- Vendor CSS Files -->
-    <link
-      href="assets/vendor/bootstrap/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet" />
-    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
-    <link href="assets/vendor/venobox/venobox.css" rel="stylesheet" />
-    <link
-      href="assets/vendor/owl.carousel/assets/owl.carousel.min.css"
-      rel="stylesheet"
-    />
-    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
-
-    <!-- Template Main CSS File -->
-    <link href="assets/css/style.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Boxicons -->
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    
+    <!-- Main CSS -->
+    <link href="assets/css/style.css" rel="stylesheet">
   </head>
-
   <body>
-    <!-- ======= Mobile nav toggle button ======= -->
-    <button type="button" class="mobile-nav-toggle d-xl-none">
-      <i class="icofont-navigation-menu"></i>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">SD</a>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#work" class="nav-link">Journey</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+                <i class="bx bx-sun sun-icon"></i>
+                <i class="bx bx-moon moon-icon"></i>
     </button>
-
-    <!-- ======= Header ======= -->
-    <header id="header" class="d-flex flex-column justify-content-center">
-      <nav class="nav-menu">
-        <ul>
-          <li class="active">
-            <a href="#hero"><i class="bx bx-home"></i> <span>Home</span></a>
-          </li>
-          <li>
-            <a href="#skills"
-              ><i class="bx bx-brain"></i> <span>Skills</span></a
-            >
-          </li>
-          <li>
-            <a href="#resume"
-              ><i class="bx bx-file-blank"></i> <span>Resume</span></a
-            >
-          </li>
-          <li>
-            <a href="#portfolio"
-              ><i class="bx bx-book-content"></i> <span>Portfolio</span></a
-            >
-          </li>
-          <li>
-            <a href="#testimonials"
-              ><i class="bx bx-server"></i> <span>Testimonials</span></a
-            >
-          </li>
-          <li>
-            <a href="#contact"
-              ><i class="bx bx-envelope bx-tada"></i> <span>Contact</span></a
-            >
-          </li>
-        </ul>
-      </nav>
-      <!-- .nav-menu -->
-    </header>
-    <!-- End Header -->
-
-    <!-- ======= Hero Section ======= -->
-    <section id="hero" class="d-flex flex-column justify-content-center">
-      <div class="container" data-aos="zoom-in" data-aos-delay="100">
-        <h1>Santosh Dawanse</h1>
-        <p>
-          I'm
-          <span
-            class="typed"
-            data-typed-items="Web Developer, App Developer, Graphic Designer, Freelancer"
-          ></span>
-        </p>
-        <div class="social-links">
-          <a href="https://twitter.com/dawansesantosh" class="twitter"
-            ><i class="bx bxl-twitter"></i
-          ></a>
-          <a href="https://www.facebook.com/santosh.dawanse" class="facebook"
-            ><i class="bx bxl-facebook"></i
-          ></a>
-          <a href="https://www.instagram.com/sandawanse" class="instagram"
-            ><i class="bx bxl-instagram"></i
-          ></a>
-          <a href="https://github.com/SantoshDawanse" class="github"
-            ><i class="bx bxl-github"></i
-          ></a>
-          <a href="https://www.linkedin.com/in/santoshdawanse/" class="linkedin"
-            ><i class="bx bxl-linkedin"></i
-          ></a>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+          </div>
         </div>
-      </div>
+    </nav>
+
+    <!-- Three.js Canvas -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-label">AI Product Builder @ Sprout AI Studio</div>
+            <h1 class="hero-title">Santosh Dawanse</h1>
+            <p class="hero-subtitle">Building AI ventures that enhance human connection</p>
+            <div class="hero-cta">
+                <a href="#work" class="btn btn-primary">View Journey</a>
+                <a href="#contact" class="btn btn-outline">Get in Touch</a>
+          </div>
+        </div>
+        <div class="scroll-down">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+      </section>
+
+    <!-- Story Section -->
+    <section id="work" class="section">
+        <div class="container">
+            <h2 class="section-title">My Journey</h2>
+            
+            <div class="story-container">
+                <div class="story-content">
+                    <p class="story-paragraph">
+                        It started with a fascination for building things. Back in <span class="highlight">2019</span>, I was crafting web applications and mobile experiences, learning the fundamentals of what makes software work. I dove into <span class="highlight">Laravel, Java, and React</span>, building everything from mortgage platforms to school management systems.
+                    </p>
+
+                    <p class="story-paragraph">
+                        By <span class="highlight">2021</span>, I found myself at Truenary Solutions, where I discovered the power of modern infrastructure. I learned to provision AWS resources using CDK, deploy custom GitLab runners on Fargate, and build scalable e-commerce platforms with <span class="highlight">Next.js</span>. This was where I realized that great software isn't just about code—it's about architecture.
+                    </p>
+
+                    <p class="story-paragraph">
+                        The next chapter took me to <span class="highlight">fintech</span>. At Rara Labs in 2022, I worked on core banking systems, diving deep into <span class="highlight">Golang and GraphQL</span>. I wrote complex queries, built accounting systems, and learned how to handle money at scale. The precision required in fintech shaped how I think about reliability and data integrity.
+                    </p>
+
+                    <p class="story-paragraph">
+                        Then came the pivot that changed everything. In <span class="highlight">2023</span>, I joined WhiteHat Engineering as a Senior Software Engineer and Team Lead. This is where I discovered my passion for <span class="highlight">AI and blockchain</span>. I led a team building platforms that accelerate drug development—work that actually saves lives. We built agentic input systems for data extraction, created <span class="highlight">GraphRAG chatbots</span> with actions, and implemented MOE agents. This wasn't just about AI—it was about using AI to solve problems that matter.
+                    </p>
+
+                    <p class="story-paragraph">
+                        Today, as an <span class="highlight">AI Product Builder</span> at <a href="https://www.sproutai.com/" target="_blank" rel="noopener" class="highlight-link">Sprout AI Studio</a>, I'm part of a venture studio building <span class="highlight">Relational AI</span>—technology designed to enhance genuine human connection, not simulate it. I partner with visionary founders to turn AI ideas into market-ready ventures, working with <span class="highlight">LLMs, RAG systems, and AI agents</span> using Python. We're building AI that amplifies human flourishing, taking ventures from ideation to launch. The journey from building simple web apps to architecting AI-powered solutions has taught me that technology is just a tool—what matters is the impact you create with it.
+                    </p>
+
+                    <div class="story-highlight-box">
+                        <p class="highlight-text">
+                            <strong>5+ years</strong> across fintech, e-commerce, IoT, and pharma tech. <strong>From code to architecture to AI.</strong> Every step building toward creating intelligent systems that make a difference.
+                        </p>
+              </div>
+            </div>
+
+                <div class="timeline-visual">
+                    <div class="timeline-line"></div>
+                    <div class="timeline-point" data-year="2019">
+                        <span class="timeline-year">2019</span>
+                        <span class="timeline-label">Started the Journey</span>
+                  </div>
+                    <div class="timeline-point" data-year="2021">
+                        <span class="timeline-year">2021</span>
+                        <span class="timeline-label">Cloud & Infrastructure</span>
+                </div>
+                    <div class="timeline-point" data-year="2022">
+                        <span class="timeline-year">2022</span>
+                        <span class="timeline-label">Fintech Engineering</span>
+              </div>
+                    <div class="timeline-point" data-year="2023">
+                        <span class="timeline-year">2023</span>
+                        <span class="timeline-label">AI & Blockchain</span>
+            </div>
+                    <div class="timeline-point active" data-year="2025">
+                        <span class="timeline-year">2025</span>
+                        <span class="timeline-label">Building Relational AI</span>
+                  </div>
+                </div>
+              </div>
+            </div>
     </section>
-    <!-- End Hero -->
 
-    <main id="main">
-      <!-- ======= About Section ======= -->
-      <section id="about" class="about">
-        <div class="container" data-aos="fade-up">
-          <div class="section-title">
-            <h2>About</h2>
-            <p>
-              With more than 4 years in technology industry, I have overcome
-              many challenges, building software solutions to running my own
-              business, yet I have to learn much more. Started as an Android
-              Developer in 2015 now working as a web developer for multiple
-              clients. It’s been quite a journey.
-            </p>
-          </div>
-        </div>
-      </section>
-      <!-- End About Section -->
+    <!-- About Section -->
+    <section id="about" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">About</h2>
+            
+            <div class="about-content">
+                <div class="about-intro">
+                    <p class="about-lead">I partner with founders to build AI ventures from idea to market—specializing in Relational AI that enhances human connection rather than simulating it. My focus is on creating scalable, impactful solutions using the right tools for the job.</p>
+            </div>
 
-      <!-- ======= Skills Section ======= -->
-      <section id="skills" class="resume">
-        <div class="container" data-aos="fade-up">
-          <div class="section-title">
-            <h2>Skills</h2>
-            <p></p>
-          </div>
-
-          <div class="row">
-            <div class="col-lg-6">
-              <div class="resume-item pb-0">
-                <h4>Web</h4>
-                <p>
-                  <em>Web Apps and Sites</em>
-                </p>
-                <ul style="list-style-type: none">
-                  <li><h5>React.js</h5></li>
-                  <li><h5>Next.js</h5></li>
-                  <li><h5>Redux</h5></li>
-                  <li><h5>Laravel</h5></li>
-                  <li><h5>HTML5</h5></li>
-                  <li><h5>CSS3</h5></li>
-                </ul>
+                <div class="tech-stack">
+                    <div class="tech-category">
+                        <h3>AI & Machine Learning</h3>
+                        <div class="tech-list">
+                            <span class="tech-item">LLMs</span>
+                            <span class="tech-item">RAG Systems</span>
+                            <span class="tech-item">GraphRAG</span>
+                            <span class="tech-item">LangGraph</span>
+                            <span class="tech-item">AI Agents</span>
+                            <span class="tech-item">Python</span>
               </div>
             </div>
-            <div class="col-lg-6">
-              <div class="resume-item">
-                <h4>Mobile App</h4>
-                <p>
-                  <em>Android and Hybrid Apps</em>
-                </p>
-                <ul style="list-style-type: none">
-                  <li><h5>Android SDK</h5></li>
-                  <li><h5>Java</h5></li>
-                  <li><h5>Flutter</h5></li>
-                  <li><h5>Dart</h5></li>
-                </ul>
+
+                    <div class="tech-category">
+                        <h3>Venture & Product</h3>
+                        <div class="tech-list">
+                            <span class="tech-item">Product Development</span>
+                            <span class="tech-item">MVP Building</span>
+                            <span class="tech-item">Go-to-Market</span>
+                            <span class="tech-item">0 to 1</span>
               </div>
             </div>
-          </div>
-          <div class="row">
-            <div class="col-lg-6">
-              <div class="resume-item pb-0">
-                <h4>Database</h4>
-                <p>
-                  <em></em>
-                </p>
-                <ul style="list-style-type: none">
-                  <li><h5>MySQL</h5></li>
-                  <li><h5>SQLite</h5></li>
-                  <li><h5>Firebase RT Database</h5></li>
-                  <li><h5>Firestore</h5></li>
-                </ul>
+
+                    <div class="tech-category">
+                        <h3>Backend & Infrastructure</h3>
+                        <div class="tech-list">
+                            <span class="tech-item">Golang</span>
+                            <span class="tech-item">GraphQL</span>
+                            <span class="tech-item">REST API</span>
+                            <span class="tech-item">PostgreSQL</span>
+                            <span class="tech-item">AWS</span>
+                            <span class="tech-item">Docker</span>
               </div>
             </div>
-            <div class="col-lg-6">
-              <div class="resume-item">
-                <h4>Others</h4>
-                <p>
-                  <em></em>
-                </p>
-                <ul style="list-style-type: none">
-                  <li><h5>Git</h5></li>
-                  <li><h5>Hubspot CRM</h5></li>
-                  <li><h5>Advance Excel</h5></li>
-                  <li><h5>Lua, Unity</h5></li>
-                  <li><h5>Photoshop</h5></li>
-                </ul>
+
+                    <div class="tech-category">
+                        <h3>Frontend Development</h3>
+                        <div class="tech-list">
+                            <span class="tech-item">TypeScript</span>
+                            <span class="tech-item">React</span>
+                            <span class="tech-item">Next.js</span>
+                            <span class="tech-item">Redux</span>
               </div>
+                  </div>
+                </div>
+
+                <div class="about-credentials">
+                    <div class="credential-item">
+                        <i class="bx bxs-graduation"></i>
+                        <span>Computer Engineering, Tribhuvan University</span>
+              </div>
+                    <div class="credential-item">
+                        <i class="bx bxs-certification"></i>
+                        <span>LangChain • DeepLearning.AI</span>
+              </div>
+            </div>
+
+                <div class="about-cta">
+                    <p>Interested in AI, blockchain, or building something impactful?</p>
+                    <a href="#contact" class="btn btn-primary">Let's Talk</a>
             </div>
           </div>
         </div>
       </section>
-      <!-- End Skills Section -->
 
-      <!-- ======= Resume Section ======= -->
-      <section id="resume" class="resume">
-        <div class="container" data-aos="fade-up">
-          <div class="section-title">
-            <h2>Resume</h2>
-            <p></p>
-          </div>
-
-          <div class="row">
-            <div class="col-lg-6">
-              <h3 class="resume-title">Summary</h3>
-              <div class="resume-item pb-0">
-                <h4>Santosh Dawanse</h4>
-                <p>
-                  <em>Web and App Developer</em>
-                </p>
-                <ul>
-                  <li>Kathmandu, Nepal</li>
-                  <li>(977) 9869750079</li>
-                  <li>dawanse.santosh@gmail.com</li>
-                </ul>
-              </div>
-
-              <h3 class="resume-title">Certification and Education</h3>
-
-              <div class="resume-item">
-                <h4>JavaScript Algorithms and Data Structures</h4>
-                <h5>Jul 2021</h5>
-                <p><em>freeCodeCamp</em></p>
-                <p><a href="https://www.freecodecamp.org/certification/fcce6fbbaa5-a7b3-44c6-8778-e0607e47194c/javascript-algorithms-and-data-structures" target="_blank">View Certification</a></p>
-              </div>
-              <div class="resume-item">
-                <h4>Responsive Web Design</h4>
-                <h5>Jun 2021</h5>
-                <p><em>freeCodeCamp</em></p>
-                <p><a href="https://www.freecodecamp.org/certification/fcce6fbbaa5-a7b3-44c6-8778-e0607e47194c/responsive-web-design" target="_blank">View Certification</a></p>
-              </div>
-
-              <div class="resume-item">
-                <h4>Intro to Machine Learning</h4>
-                <h5>2019</h5>
-                <p><em>Kaggle</em></p>
-                <p><a href="https://www.kaggle.com/learn/certification/santoshdawanse/intro-to-machine-learning" target="_blank">View Certification</a></p>
-              </div>
-
-              <div class="resume-item">
-                <h4>CS50 Intro to Game Development</h4>
-                <h5>2019</h5>
-                <p><em>HarvardX</em></p>
-                <p></p>
-              </div>
-
-              <div class="resume-item">
-                <h4>Bachelor's in Computer Engineering</h4>
-                <h5>2011 - 2015</h5>
-                <p><em>Tribhuvan University, Kathmandu, Nepal</em></p>
-                <p></p>
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <h3 class="resume-title">Professional Experience</h3>
-              <div class="resume-item">
-                <h4>Software Engineer</h4>
-                <h5>03/2021 - Present</h5>
-                <p><em>Truenary Solutions, Kathmandu, Nepal</em></p>
-                <ul>
-                  <li>Working as a Frontend Engineer</li>
-                </ul>
-              </div>
-              <div class="resume-item">
-                <h4>Software Engineer</h4>
-                <h5>08/2016 - 03/2021</h5>
-                <p><em>Freelancer, Kathmandu, Nepal</em></p>
-                <ul>
-                  <li>Working as a Technology Partner for multiple clients.</li>
-                  <li>Building and maintaining websites</li>
-                  <li>Generating reports</li>
-                </ul>
-              </div>
-              <div class="resume-item">
-                <h4>Co-founder, CTO at Pawshome Nepal</h4>
-                <h5>05/2018 - 02/2021</h5>
-                <p><em>Pawshome Nepal, Kathmandu, Nepal</em></p>
-                <ul>
-                  <li>Created an online platform to sell pet-products</li>
-                  <li>Maintaining the system, Inventory Management</li>
-                  <li>Generating and Analyzing reports</li>
-                </ul>
-              </div>
-              <div class="resume-item">
-                <h4>Mobile App Lead (Chatpate)</h4>
-                <h5>01/2019 - 05/2019</h5>
-                <p><em>Aayaam Technologies, Lalitpur, Nepal</em></p>
-                <ul>
-                  <li>Design a user interface for the app</li>
-                  <li>Developed an app which runs the chatpate machine</li>
-                  <li>Generating reports and sending that to the admin</li>
-                </ul>
-              </div>
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Let's Connect</h2>
+            
+            <div class="contact-content">
+                <p class="contact-text">Interested in AI, blockchain, or building something great together? Let's talk.</p>
+                
+                <div class="contact-links">
+                    <a href="mailto:dawanse.santosh@gmail.com" class="contact-link">
+                        <i class="bx bx-envelope"></i>
+                        <span>dawanse.santosh@gmail.com</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/santoshdawanse/" target="_blank" class="contact-link">
+                        <i class="bx bxl-linkedin"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="https://github.com/SantoshDawanse" target="_blank" class="contact-link">
+                        <i class="bx bxl-github"></i>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://twitter.com/dawansesantosh" target="_blank" class="contact-link">
+                        <i class="bx bxl-twitter"></i>
+                        <span>Twitter</span>
+                    </a>
             </div>
           </div>
         </div>
       </section>
-      <!-- End Resume Section -->
 
-      <!-- ======= Portfolio Section ======= -->
-      <section id="portfolio" class="portfolio section-bg">
-        <div class="container" data-aos="fade-up">
-          <div class="section-title">
-            <h2>Portfolio</h2>
-            <p></p>
-          </div>
-
-          <div class="row">
-            <div
-              class="col-lg-12 d-flex justify-content-center"
-              data-aos="fade-up"
-              data-aos-delay="100"
-            >
-              <ul id="portfolio-flters">
-                <li data-filter="*" class="filter-active">All</li>
-                <li data-filter=".filter-web">Web</li>
-                <li data-filter=".filter-app">App</li>
-                <li data-filter=".filter-design">Design</li>
-              </ul>
-            </div>
-          </div>
-
-          <div
-            class="row portfolio-container"
-            data-aos="fade-up"
-            data-aos-delay="200"
-          >
-            <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-              <div class="portfolio-wrap">
-                <img
-                  src="assets/img/portfolio/genovaci.jpg"
-                  class="img-fluid"
-                  alt=""
-                />
-                <div class="portfolio-info">
-                  <h4>Genovaci</h4>
-                  <p>Web</p>
-                  <div class="portfolio-links">
-                    <a
-                      href="assets/img/portfolio/genovaci.jpg"
-                      data-gall="portfolioGallery"
-                      class="venobox"
-                      title="Web"
-                      ><i class="bx bx-image"></i
-                    ></a>
-                    <a
-                      href="#"
-                      data-gall="portfolioDetailsGallery"
-                      data-vbtype="iframe"
-                      class="venobox"
-                      title="Portfolio Details"
-                      ><i class="bx bx-detail"></i
-                    ></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-              <div class="portfolio-wrap">
-                <img
-                  src="assets/img/portfolio/nic.jpg"
-                  class="img-fluid"
-                  alt=""
-                />
-                <div class="portfolio-info">
-                  <h4>NIC College Website</h4>
-                  <p>Web</p>
-                  <div class="portfolio-links">
-                    <a
-                      href="assets/img/portfolio/nic.jpg"
-                      data-gall="portfolioGallery"
-                      class="venobox"
-                      title="Web"
-                      ><i class="bx bx-image"></i
-                    ></a>
-                    <a
-                      href="#"
-                      data-gall="portfolioDetailsGallery"
-                      data-vbtype="iframe"
-                      class="venobox"
-                      title="Portfolio Details"
-                      ><i class="bx bx-detail"></i
-                    ></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-              <div class="portfolio-wrap">
-                <img
-                  src="assets/img/portfolio/nic-demo.jpg"
-                  class="img-fluid"
-                  alt=""
-                />
-                <div class="portfolio-info">
-                  <h4>NIC College Demo(Working)</h4>
-                  <p>Web</p>
-                  <div class="portfolio-links">
-                    <a
-                      href="assets/img/portfolio/nic-demo.jpg"
-                      data-gall="portfolioGallery"
-                      class="venobox"
-                      title="Web"
-                      ><i class="bx bx-image"></i
-                    ></a>
-                    <a
-                      href="#"
-                      data-gall="portfolioDetailsGallery"
-                      data-vbtype="iframe"
-                      class="venobox"
-                      title="Portfolio Details"
-                      ><i class="bx bx-detail"></i
-                    ></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-              <div class="portfolio-wrap">
-                <img
-                  src="assets/img/portfolio/nepalnics.jpg"
-                  class="img-fluid"
-                  alt=""
-                />
-                <div class="portfolio-info">
-                  <h4>National Institute of Contemporary Studies</h4>
-                  <p>Web</p>
-                  <div class="portfolio-links">
-                    <a
-                      href="assets/img/portfolio/nepalnics.jpg"
-                      data-gall="portfolioGallery"
-                      class="venobox"
-                      title="Web"
-                      ><i class="bx bx-image"></i
-                    ></a>
-                    <a
-                      href="#"
-                      data-gall="portfolioDetailsGallery"
-                      data-vbtype="iframe"
-                      class="venobox"
-                      title="Portfolio Details"
-                      ><i class="bx bx-detail"></i
-                    ></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-              <div class="portfolio-wrap">
-                <img
-                  src="assets/img/portfolio/bpxicompany.jpg"
-                  class="img-fluid"
-                  alt=""
-                />
-                <div class="portfolio-info">
-                  <h4>BPXI Company</h4>
-                  <p>Web</p>
-                  <div class="portfolio-links">
-                    <a
-                      href="assets/img/portfolio/bpxicompany.jpg"
-                      data-gall="portfolioGallery"
-                      class="venobox"
-                      title="Web"
-                      ><i class="bx bx-image"></i
-                    ></a>
-                    <a
-                      href="#"
-                      data-gall="portfolioDetailsGallery"
-                      data-vbtype="iframe"
-                      class="venobox"
-                      title="Portfolio Details"
-                      ><i class="bx bx-detail"></i
-                    ></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-              <div class="portfolio-wrap">
-                <img
-                  src="assets/img/portfolio/pawshomenepal.jpg"
-                  class="img-fluid"
-                  alt=""
-                />
-                <div class="portfolio-info">
-                  <h4>Pawshome Nepal</h4>
-                  <p>Web</p>
-                  <div class="portfolio-links">
-                    <a
-                      href="assets/img/portfolio/pawshomenepal.jpg"
-                      data-gall="portfolioGallery"
-                      class="venobox"
-                      title="Web"
-                      ><i class="bx bx-image"></i
-                    ></a>
-                    <a
-                      href="#"
-                      data-gall="portfolioDetailsGallery"
-                      data-vbtype="iframe"
-                      class="venobox"
-                      title="Portfolio Details"
-                      ><i class="bx bx-detail"></i
-                    ></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-              <div class="portfolio-wrap">
-                <img
-                  src="assets/img/portfolio/ielts-aayam.jpg"
-                  class="img-fluid"
-                  alt=""
-                />
-                <div class="portfolio-info">
-                  <h4>IELTS for All</h4>
-                  <p>App</p>
-                  <div class="portfolio-links">
-                    <a
-                      href="assets/img/portfolio/ielts-aayam.jpg"
-                      data-gall="portfolioGallery"
-                      class="venobox"
-                      title="App"
-                      ><i class="bx bx-image"></i
-                    ></a>
-                    <a
-                      href="#"
-                      data-gall="portfolioDetailsGallery"
-                      data-vbtype="iframe"
-                      class="venobox"
-                      title="Portfolio Details"
-                      ><i class="bx bx-detail"></i
-                    ></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-              <div class="portfolio-wrap">
-                <img
-                  src="assets/img/portfolio/quakereport.jpg"
-                  class="img-fluid"
-                  alt=""
-                />
-                <div class="portfolio-info">
-                  <h4>Quake Report</h4>
-                  <p>App</p>
-                  <div class="portfolio-links">
-                    <a
-                      href="assets/img/portfolio/quakereport.jpg"
-                      data-gall="portfolioGallery"
-                      class="venobox"
-                      title="App"
-                      ><i class="bx bx-image"></i
-                    ></a>
-                    <a
-                      href="#"
-                      data-gall="portfolioDetailsGallery"
-                      data-vbtype="iframe"
-                      class="venobox"
-                      title="Portfolio Details"
-                      ><i class="bx bx-detail"></i
-                    ></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item filter-design">
-              <div class="portfolio-wrap">
-                <img
-                  src="assets/img/portfolio/nic-ad-11.jpg"
-                  class="img-fluid"
-                  alt=""
-                />
-                <div class="portfolio-info">
-                  <h4>NIC Admission Open XI 2077/78</h4>
-                  <p>Design</p>
-                  <div class="portfolio-links">
-                    <a
-                      href="assets/img/portfolio/nic-ad-11.jpg"
-                      data-gall="portfolioGallery"
-                      class="venobox"
-                      title="Design"
-                      ><i class="bx bx-image"></i
-                    ></a>
-                    <a
-                      href="#"
-                      data-gall="portfolioDetailsGallery"
-                      data-vbtype="iframe"
-                      class="venobox"
-                      title="Portfolio Details"
-                      ><i class="bx bx-detail"></i
-                    ></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item filter-design">
-              <div class="portfolio-wrap">
-                <img
-                  src="assets/img/portfolio/nic-ad-hm-11.jpg"
-                  class="img-fluid"
-                  alt=""
-                />
-                <div class="portfolio-info">
-                  <h4>NIC Admission Open XI 2077/78</h4>
-                  <p>Design</p>
-                  <div class="portfolio-links">
-                    <a
-                      href="assets/img/portfolio/nic-ad-hm-11.jpg"
-                      data-gall="portfolioGallery"
-                      class="venobox"
-                      title="Design"
-                      ><i class="bx bx-image"></i
-                    ></a>
-                    <a
-                      href="#"
-                      data-gall="portfolioDetailsGallery"
-                      data-vbtype="iframe"
-                      class="venobox"
-                      title="Portfolio Details"
-                      ><i class="bx bx-detail"></i
-                    ></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item filter-design">
-              <div class="portfolio-wrap">
-                <img
-                  src="assets/img/portfolio/NIC-frontdesign.jpg"
-                  class="img-fluid"
-                  alt=""
-                />
-                <div class="portfolio-info">
-                  <h4>NIC Tri-fold Design</h4>
-                  <p>Design</p>
-                  <div class="portfolio-links">
-                    <a
-                      href="assets/img/portfolio/NIC-frontdesign.jpg"
-                      data-gall="portfolioGallery"
-                      class="venobox"
-                      title="Design"
-                      ><i class="bx bx-image"></i
-                    ></a>
-                    <a
-                      href="#"
-                      data-gall="portfolioDetailsGallery"
-                      data-vbtype="iframe"
-                      class="venobox"
-                      title="Portfolio Details"
-                      ><i class="bx bx-detail"></i
-                    ></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item filter-design">
-              <div class="portfolio-wrap">
-                <img
-                  src="assets/img/portfolio/NIC-backdesign.jpg"
-                  class="img-fluid"
-                  alt=""
-                />
-                <div class="portfolio-info">
-                  <h4>NIC Tri-fold Design</h4>
-                  <p>Design</p>
-                  <div class="portfolio-links">
-                    <a
-                      href="assets/img/portfolio/NIC-backdesign.jpg"
-                      data-gall="portfolioGallery"
-                      class="venobox"
-                      title="Design"
-                      ><i class="bx bx-image"></i
-                    ></a>
-                    <a
-                      href="#"
-                      data-gall="portfolioDetailsGallery"
-                      data-vbtype="iframe"
-                      class="venobox"
-                      title="Portfolio Details"
-                      ><i class="bx bx-detail"></i
-                    ></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- End Portfolio Section -->
-
-      <!-- ======= Testimonials Section ======= -->
-      <section id="testimonials" class="testimonials section-bg">
-        <div class="container" data-aos="fade-up">
-          <div class="section-title">
-            <h2>Testimonials</h2>
-          </div>
-
-          <div
-            class="owl-carousel testimonials-carousel"
-            data-aos="zoom-in"
-            data-aos-delay="100"
-          >
-            <div class="testimonial-item">
-              <img
-                src="assets/img/testimonials/aniladhikari.jpg"
-                class="testimonial-img"
-                alt="Anil Adhikari"
-              />
-              <h3>Anil Adhikari</h3>
-              <h4>CEO &amp; Founder</h4>
-              <p>
-                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                He has been a great technology partner ever since we partnered
-                with him. Always there for the support.
-                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-              </p>
-            </div>
-
-            <div class="testimonial-item">
-              <img
-                src="assets/img/testimonials/dilkrishna.jpg"
-                class="testimonial-img"
-                alt="Dil Krishna"
-              />
-              <h3>Dil Krishna</h3>
-              <h4>Finance Director, NIC</h4>
-              <p>
-                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                We have been receiving a top quality of service. Either that be
-                information system building, Ad Campaigns, Graphic Designs or
-                report generation, he has got all the skills that our
-                organization needs. He truely is a one man army.
-                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- End Testimonials Section -->
-
-      <!-- ======= Contact Section ======= -->
-      <section id="contact" class="contact">
-        <div class="container" data-aos="fade-up">
-          <div class="section-title">
-            <h2>Contact</h2>
-          </div>
-
-          <div class="row mt-1">
-            <div class="col-lg-4">
-              <div class="info">
-                <div class="address">
-                  <i class="icofont-google-map"></i>
-                  <h4>Location:</h4>
-                  <p>Kathmandu, Nepal</p>
-                </div>
-
-                <div class="email">
-                  <i class="icofont-envelope"></i>
-                  <h4>Email:</h4>
-                  <p>dawanse.santosh@gmail.com</p>
-                </div>
-
-                <div class="phone">
-                  <i class="icofont-phone"></i>
-                  <h4>Call:</h4>
-                  <p>(977) 9869750079</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-8 mt-5 mt-lg-0">
-              <script
-                charset="utf-8"
-                type="text/javascript"
-                src="//js.hsforms.net/forms/shell.js"
-              ></script>
-              <script>
-                hbspt.forms.create({
-                  portalId: "8490897",
-                  formId: "728366b3-c329-4612-b60e-cc89059d72f7",
-                });
-              </script>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- End Contact Section -->
-    </main>
-    <!-- End #main -->
-
-    <!-- ======= Footer ======= -->
-    <footer id="footer">
+    <!-- Footer -->
+    <footer class="footer">
       <div class="container">
-        <h3>Santosh Dawanse</h3>
-        <p>Web and App Developer</p>
-        <div class="social-links">
-          <a href="https://twitter.com/dawansesantosh" class="twitter"
-            ><i class="bx bxl-twitter"></i
-          ></a>
-          <a href="https://www.facebook.com/santosh.dawanse" class="facebook"
-            ><i class="bx bxl-facebook"></i
-          ></a>
-          <a href="https://www.instagram.com/sandawanse" class="instagram"
-            ><i class="bx bxl-instagram"></i
-          ></a>
-          <a href="https://github.com/SantoshDawanse" class="github"
-            ><i class="bx bxl-github"></i
-          ></a>
-          <a href="https://www.linkedin.com/in/santoshdawanse/" class="linkedin"
-            ><i class="bx bxl-linkedin"></i
-          ></a>
-        </div>
-        <div class="copyright">
-          ❤ from <strong><span>Santosh Dawanse</span></strong>
-        </div>
+            <p>© 2025 Santosh Dawanse</p>
       </div>
     </footer>
-    <!-- End Footer -->
 
-    <a href="#" class="back-to-top"><i class="bx bx-up-arrow-alt"></i></a>
-    <div id="preloader"></div>
-
-    <!-- Vendor JS Files -->
-    <script src="assets/vendor/jquery/jquery.min.js"></script>
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
-    <script src="assets/vendor/php-email-form/validate.js"></script>
-    <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
-    <script src="assets/vendor/counterup/counterup.min.js"></script>
-    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-    <script src="assets/vendor/venobox/venobox.min.js"></script>
-    <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
-    <script src="assets/vendor/typed.js/typed.min.js"></script>
-    <script src="assets/vendor/aos/aos.js"></script>
-
-    <!-- Template Main JS File -->
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    
+    <!-- Main JS -->
     <script src="assets/js/main.js"></script>
-
-    <!-- Start of HubSpot Embed Code -->
-    <script
-      type="text/javascript"
-      id="hs-script-loader"
-      async
-      defer
-      src="//js.hs-scripts.com/8490897.js"
-    ></script>
-    <!-- End of HubSpot Embed Code -->
   </body>
 </html>
