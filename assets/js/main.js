@@ -166,9 +166,9 @@ function initNavigation() {
                     top: targetPosition,
                     behavior: 'smooth'
                 });
-            }
-        });
+      }
     });
+  });
 }
 
 // ===================================
